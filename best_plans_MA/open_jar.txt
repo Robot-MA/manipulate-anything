@@ -1,0 +1,29 @@
+{
+  "primitive_actions": [
+    "pick",
+    "rotatex",
+    "retract",
+    "success"
+  ],
+  "Objects": [
+    "the green jar lid",
+    "None",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did the robot gripper grasp on the green jar lid?",
+    "did the robot gripper rotate the green jar lid?",
+    "did the robot gripper retract the green jar lid?",
+    "did the robot gripper successfully unscrew the jar?"
+  ],
+  "viewpoints": [0, 1]
+}

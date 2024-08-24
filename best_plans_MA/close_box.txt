@@ -1,0 +1,26 @@
+{
+  "primitive_actions": [
+    "pick",
+    "close",
+    "success"
+  ],
+  "Objects": [
+    "green box lid cover",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did robot gripper grasp onto the green lid box cover?",
+    "did the robot gripper close the box?",
+    "did the robot gripper close the box?"
+  ],
+  "viewpoints": [0, 1]
+}

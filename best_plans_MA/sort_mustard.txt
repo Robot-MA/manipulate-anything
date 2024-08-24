@@ -1,0 +1,32 @@
+{
+  "primitive_actions": [
+    "pick",
+    "retract",
+    "place",
+    "drop",
+    "success"
+  ],
+  "Objects": [
+    "yellow mustard bottle",
+    "None",
+    "red patch",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did robot gripper grasp the yellow mustard bottle?",
+    "did the robot gripper lift up the yellow mustard bottle?",
+    "did the robot gripper place the yellow mustard bottle on or over the red patch?",
+    "did the robot gripper place the yellow mustard bottle onto the red patch?",
+    "did the robot gripper place the yellow mustard bottle onto the red patch?"
+  ],
+  "viewpoints": [0, 1]
+}

@@ -1,0 +1,26 @@
+{
+  "primitive_actions": [
+    "pick",
+    "retract",
+    "success"
+  ],
+  "Objects": [
+    "green umbrella handle",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did robot gripper grasp onto the green umbrella handle?",
+    "did the robot gripper lift up the green umbrella handle from the umbrella holder?",
+    "did the robot gripper lift up the green umbrella handle from the umbrella holder?"
+  ],
+  "viewpoints": [0, 1]
+}

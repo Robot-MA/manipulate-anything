@@ -1,0 +1,26 @@
+{
+  "primitive_actions": [
+    "pick",
+    "retract",
+    "success"
+  ],
+  "Objects": [
+    "red cup",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did robot gripper grasp onto the red cup?",
+    "did the robot gripper lift up the red cup from the table?",
+    "did the robot gripper lift up the red cup from the table?"
+  ],
+  "viewpoints": [0, 1]
+}

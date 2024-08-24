@@ -1,0 +1,26 @@
+{
+  "primitive_actions": [
+    "pick",
+    "press",
+    "success"
+  ],
+  "Objects": [
+    "The green circle button",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "Did the robot gripper grasp the green circle button?",
+    "Did the robot gripper press down on the green circle button?",
+    "Did the lamp light up?"
+  ],
+  "viewpoints": [0, 1]
+}

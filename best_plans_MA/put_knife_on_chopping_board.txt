@@ -1,0 +1,32 @@
+{
+  "primitive_actions": [
+    "pick",
+    "retract",
+    "place",
+    "drop",
+    "success"
+  ],
+  "Objects": [
+    "green knife handle",
+    "None",
+    "red square chopping board",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did robot gripper grasp onto the green knife handle?",
+    "did the robot gripper pull the green knife handle out of the knife holder?",
+    "did the robot gripper place the green knife handle on or over the chopping board?",
+    "did the robot gripper place the green knife handle onto the red square chopping board?",
+    "did the robot gripper place the green knife handle onto the red square chopping board?"
+  ],
+  "viewpoints": [0, 1]
+}

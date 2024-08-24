@@ -1,0 +1,29 @@
+{
+  "primitive_actions": [
+    "pick",
+    "rotatex",
+    "retract",
+    "success"
+  ],
+  "Objects": [
+    "the red wine cap",
+    "None",
+    "None",
+    "None"
+  ],
+  "pick": [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+  ],
+  "place": [0, 0, 0, 0],
+  "predict": 1,
+  "verification": [
+    "did the robot gripper grasp on the red wine cap?",
+    "did the robot gripper rotate the red wine cap?",
+    "did the robot gripper retract the red wine cap?",
+    "did the robot gripper successfully unscrew the wine?"
+  ],
+  "viewpoints": [0, 1]
+}
