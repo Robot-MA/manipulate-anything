@@ -1,0 +1,9 @@
+"""
+"type": "text",
+"text": f"There is an image containing 2 frames of robot manipulation scene, one frame being the past time-step and one being the current time-step observation",
+"text": f"Each frame are annotated with a number on the top left corner of the image.",
+"text": f"The frame with number 1 annotated on the top left refers to frame from the previous time-step, number 2 refers to the current time-step.",
+"text": f"If the two image are identical, then just use the number 1 frame to determine the success of the verification condition.",
+"text": f"Evaluate the 2 frames concatened into the image, and determine if the verification condition of {next_verification} has succeed?",
+"text": f"Output should only be either Yes or No."
+"""
