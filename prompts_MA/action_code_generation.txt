@@ -1,0 +1,75 @@
+Background: You are an AI in robot simulation code and task generation. I will provide you some examples of task primitive actions written in code based on their corresponding current image frame.
+Task: Generate the elif condition for the new given primitive action of {action} given the current state (in the form of an image). Then, you will help me generate the code snippet for the function to execute the primitive action. The output should only be the function code snippet
+=========
+Example primitivte action: 'close'
+Objective: rotate the gripper to close something
+
+Example generated function for the above task primitives:
+
+def close_gripper_action(obs, quaternion_multiply):
+    action = obs['gripper_matrix']
+    gripper_open = 1  # Ensure the gripper remains closed
+    action[1, 3] += 0.3
+    action[2, 3] += 0.1
+    angle_x = np.radians(-45)
+    rotation_quaternion = [np.cos(angle_x / 2), np.sin(angle_x / 2), 0, 0]
+    rot = quaternion_multiply(obs['gripper_pose'][3:], rotation_quaternion)
+    pred = gripper_pose_from_rlbench(action)
+    return action, gripper_open, pred
+
+=========
+or
+=========
+Example primitive action: 'sweep'
+Objective: move the gripper along a direction to sweep things
+
+Example generated function for the above task primitives:
+
+def sweep_action(obs, sweep_direction='x', sweep_amount=0.1):
+    action = obs['gripper_matrix']
+    gripper_open = 0  # Ensure the gripper remains closed
+    if sweep_direction == 'x':
+        action[0, 3] += sweep_amount
+    elif sweep_direction == 'y':
+        action[1, 3] += sweep_amount
+    pred = gripper_pose_from_rlbench(action)
+    return action, gripper_open, pred
+
+=========
+or
+=========
+Example primitivte action: 'rotatex'
+Objective: rotate the gripper in roll direction
+
+Example generated function for the above task primitives:
+
+def rotate_gripper_x(obs, quaternion_multiply, angle=45):
+    action = obs['gripper_matrix']
+    gripper_open = 0  # Ensure the gripper remains closed
+    angle_x = np.radians(angle)
+    rotation_quaternion = [np.cos(angle_x / 2), np.sin(angle_x / 2), 0, 0]
+    rot = quaternion_multiply(obs['gripper_pose'][3:], rotation_quaternion)
+    pred = gripper_pose_from_rlbench(action)
+    return action, gripper_open, pred
+
+=========
+New primitive action: {action}
+Objective: {action} {object}
+Note:
+- assign all the values for any variables within the function based on the objective
+- You can alternate translation via this line:
+trans_z = action[:3, 3] + 0.1 * action[:3, 2]
+trans_x = action[:3, 3] + 0.1 * action[:3, 0]
+tran_y = action[:3, 3] + 0.1 * action[:3, 1]
+
+
+
+Output code template:
+
+```python
+
+...[Insert code here]....
+
+```
+
+*No necessary text in the output and just write out all code with the function only.

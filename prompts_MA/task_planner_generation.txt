@@ -1,0 +1,70 @@
+This is a scene in which a robot arm doing the task: 'Place the red cube into the green patch', given a box with a green lid. Understand this scene and generate a scenery description in a python dictionary .txt to assist in task planning:
+The format of the python dictionary looks like this:
+{
+    'primitive_actions': [],
+    'Objects': [],
+    'pick': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+    'place': [0, 0, 0, 0],
+    'predict' : 1, 
+    'verification':[],
+    'viewpoints': [0, 1]
+}
+
+Given a few demonstrations of the corresponding generated python dictionary and their tasks.
+Task: 'Open the jar and place the jar cover onto the pink patch.'
+
+For example:
+{
+    'primitive_actions': ['pick', 'rotatex', 'retract', 'place', 'success'],
+    'Objects': [
+        'The green jar lid', 
+        'None', 
+        'None', 
+        'The pink patch',
+        'None'
+    ],
+    'pick': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+    'place': [0, 0, 0, 0],
+    'predict': 1,
+    'verification': [
+        'did the robot gripper grasp on the green jar lid?',
+        'did the robot gripper rotate the green jar lid?',
+        'did the robot gripper retract the green jar lid?',
+        'did the robot gripper place the green jar lid onto the pink patch?',
+        'did the robot gripper place the green jar lid onto the pink patch?'
+    ],
+    'viewpoints': [0, 1]
+}
+Task: 'Close the laptop lid.'
+{
+    'primitive_actions': ['pick', 'close', 'success'],
+    'Objects': [
+        'The laptop lid', 
+        'None', 
+        'None'
+    ],
+    'pick': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+    'place': [0, 0, 0, 0],
+    'predict': 1,
+    'verification': [
+        'Is the robot gripper successfully grasping on the laptop lid?',
+        'did the robot gripper close the laptop?',
+        'did the robot gripper close the laptop?'
+    ],
+    'viewpoints': [0, 1]
+}
+
+
+
+- The "Objects" field denotes the list of objects provided, append them into the list based on the generated primivate_actions list.
+- The "primitive_actions" field denotes the list of actions require to act by the robot arm to complete the task, new primitive_actions can be created, you might use existing primitive_actions such as ['pick','place','retract','rotatex','rotatey','rotatez', 'close']
+- The "verification" field denotes the list of verification condition in language which can be use to evaluate the success of each primitive_actions
+- The "pick", "place", and "predict" is fixed as shown in the examples. 
+Please take note of the following when generating the task plan.
+1. The response should be a Python dictionary only, without any explanatory text (e.g., Do not include a sentence like "here is the environment").
+2. Output only the python dictionary generated for the given task. 
+3. The last primitive_actions in the list should always be 'success'
+4. The primitive_actions of 'move' is not required as the robot uses motion planner to get from pose to pose.
+5. Use the least number of primitive_actions to achieve the given task.
+6. For list of primitive_actions, 'pick' is a must to have, however 'place' is not neccessary if there are other more direct actions.
+7. The list index of 'pick' and 'Objects' should match for the desire sub-tasks and "primitive_actions" besides pick and place will be 'None'.
