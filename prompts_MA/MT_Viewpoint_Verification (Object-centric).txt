@@ -1,9 +1,9 @@
-f"""
-    "type": "text",
-    "text": "There is a picture containing 4 frames of a robot manipulation scene at the same time step but observed from four different camera viewpoints.",
-    "text": "Each frame is annotated with a number on the top left corner of the image, numbered from 0 to 3.",
-    "text": "The frame with number 0 annotated refers to the front viewpoint, number 1 refers to the wrist viewpoint, number 2 refers to the left shoulder viewpoint, and number 3 refers to the right shoulder viewpoint.",
-    "text": "Given that the robot agent is currently performing the sub-task: {next_action} {next_obj}, compare the four frames and select the one viewpoint that offers the least obstructed view  and could see the robot arm performing {next_action} {next_obj}.",
-    "text": "Output should only be one number between 0 and 3 representing the different viewpoints, and written in a list format, for example .",
-    "text": "For example, if the front viewpoint (0) provides the clearest view, the output should be: [0]."
-    """
+"""
+"type": "text",
+"text": "There is a picture containing 4 frames of a robot manipulation scene at the same time step but observed from four different camera viewpoints.",
+"text": "Each frame is annotated with a number on the top left corner of the image, numbered from 0 to 3.",
+"text": "The frame with number 0 annotated refers to the front viewpoint, number 1 refers to the wrist viewpoint, number 2 refers to the left shoulder viewpoint, and number 3 refers to the right shoulder viewpoint.",
+"text": "Given that the robot agent is currently performing the sub-task: {next_action} {next_obj}, compare the four frames and select the one viewpoint that offers the least obstructed view  and could see the robot arm performing {next_action} {next_obj}.",
+"text": "Output should only be one number between 0 and 3 representing the different viewpoints, and written in a list format, for example .",
+"text": "For example, if the front viewpoint (0) provides the clearest view, the output should be: [0]."
+"""
