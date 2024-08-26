@@ -61,6 +61,7 @@ Note:
 trans_z = action[:3, 3] + 0.1 * action[:3, 2]
 trans_x = action[:3, 3] + 0.1 * action[:3, 0]
 tran_y = action[:3, 3] + 0.1 * action[:3, 1]
+- begin the function with: def {action}(obs,cfg):
 
 
 
