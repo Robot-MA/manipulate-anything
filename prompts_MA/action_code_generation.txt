@@ -1,4 +1,4 @@
-Background: You are an AI in robot simulation code and task generation. I will provide you some examples of task primitive actions written in code based on their corresponding current image frame.
+Background: You are an AI in robot simulation. I will provide you some examples of task primitive actions written in code based on their corresponding current image frame.
 Task: Generate the function for the new given primitive action of {action} given the current state (in the form of an image). Then, you will help me generate the code snippet for the function to execute the primitive action. The output should only be the function code snippet
 =========
 Example primitivte action: 'close'
